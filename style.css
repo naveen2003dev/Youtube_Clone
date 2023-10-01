@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Noto+Sans+Linear+B&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto','sans-serif';
+}
+
+/* Header */
+
+.material-symbols-outlined{
+    color: rgb(96, 96, 96);
+}
+.ri-wireless-charging-line{
+    color: rgb(96, 96, 96);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 1em;
+}
+
+.header_left{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 150px;
+    margin-left: 15px;
+}
+
+.header_search{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header i{
+    padding: 0px 7px;
+    cursor: pointer;
+}
+
+.header_search form{
+    border: 1px solid #ddd;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    display: flex;
+}
+
+.header_search input{
+    width: 500px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+}
+
+.header_search button{
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#mic{
+    margin-left: 10px;
+}
+
+/* Main Body */
+
+.mainBody{
+    height: calc(100vh - 70px);
+    display: flex;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+
+.sidebar_categories{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.sidebar_category{
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+.sidebar_category span{
+    margin-left: 15px;
+}
+
+.sidebar_category:hover{
+    cursor: pointer;
+    background-color: #e5e5e5;
+}
+
+hr{
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+}
+
+.subscribed_list p{
+    
+    color: #5a5a5a;
+}
+
+.subscribed_list h3{
+    font-size: 15px;
+    margin: 20px;
+    color: #5a5a5a;
+}
+
+.subscribed_list a{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    width: fit-content;
+    text-decoration:none;
+}
+
+.subscribed_list a img{
+    width: 25px;
+    border-radius: 50%;
+}
+
+a:hover{
+    cursor: pointer;
+    background-color: #e5e5e5;
+}
+
+/* Videos */
+
+.videos{
+    background-color: #f9f9f9;
+    height: 100%;
+    width: 100%;
+    padding: 15px 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.videos_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.video{
+    width: 300px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 30px;
+}
+
+.video_thumbnail{
+    width: 100%;
+    height: 170px;
+}
+
+.video_thumbnail img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.author img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.video_details{
+    display: flex;
+    margin-top: 10px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+
+.title h3{
+    color: rgb(3,3,3);
+    line-height: 18px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.title a, span{
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+}
+
+h1{
+    color: rgb(3,3,3);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+  
+  .video:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+@media (max-width: 426px){
+    .header_search{
+        display: none;
+    }
+
+    .header_right .material-symbols-outlined{
+        display: none;
+    }
+
+    .header_right .display-this{
+        display: inline;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .show-sidebar{
+        display: inline;
+        position: fixed;
+        top: 4.4rem;
+        height: auto;
+        background-color: white;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px){
+    .header_search{
+        display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .show-sidebar{
+        display: inline;
+        position: sticky;
+        top: 4.4rem;
+        height: auto;
+        background-color: white;
+    }
+}
+
+@media (min-width: 769px){
+
+    .sidebar{
+        display: none;
+    }
+    .show-sidebar{
+        display: inline;
+        position: sticky;
+        top: 4.4rem;
+        height: auto;
+        background-color: white;
+    }
+}
+
+
+/* play-video.html */
+
+.play_container{
+    padding-left: 2%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.play_video{
+    flex-basis: 69%;
+}
+
+.right-sidebar{
+    flex-basis: 30%;
+}
+
+.play_video video{
+    width: 100%;
+}
+
+.side-video-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.side-video-list img{
+    width: 100%;
+}
+
+.vid-info a{
+    text-decoration: none;
+}
+
+.side-video-list .small-thumbnail{
+    flex-basis: 49%;
+}
+
+.side-video-list .vid-info{
+    flex-basis: 49%;
+}
+
+.side-video-list:hover {
+    transform: scale(0.9); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.play_video .tags a{
+    color: #0000ff;
+    size: 13px;
+    text-decoration: none;
+}
+
+.play_video h3{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.play_video .play-video-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px;
+    color: #5a5a5a;
+}
+
+.title-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-icon i{
+    padding: 0px 7px;
+    cursor: pointer;
+}
+
+.play_video hr{
+    border: 0;
+    height: 2px;
+    color: #3b3838;
+    margin: 10px 0;
+}
+
+.publisher{
+    display: flex;
+    align-items: center;
+    
+    margin-top: 25px;
+}
+
+.publisher img{
+    border: 2px solid #5a5a5a;
+    border-radius: 50%;
+}
+
+.publisher div{
+    flex: 1;
+}
+
+.publisher div p, span{
+    margin-left: 20px;
+    color: black;
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.publisher button{
+    width: 120px;
+    height: 40px;
+    background-color: red;
+    border: none;
+    border-radius: 15%;
+    cursor: pointer;
+    margin-right: 20px;
+    color: #f9f9f9;
+    
+}
